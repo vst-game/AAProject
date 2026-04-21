@@ -6,6 +6,8 @@
 *.lo
 *.o
 *.obj
+.claude
+.idea
 
 # Precompiled Headers
 *.gch
