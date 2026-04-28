@@ -1,0 +1,8 @@
+{
+	"BuildId": "37670630",
+	"Modules": 
+	{
+		"ProjectAA": "UnrealEditor-ProjectAA-Win64-DebugGame.dll",
+		"ProjectAAClient": "UnrealEditor-ProjectAAClient-Win64-DebugGame.dll"
+	}
+}

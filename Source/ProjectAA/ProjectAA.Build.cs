@@ -16,7 +16,7 @@ public class ProjectAA : ModuleRules
 			"CoreUObject",
 			"Engine",
 			"InputCore",
-			"EnhancedInput" 
+			"EnhancedInput"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
