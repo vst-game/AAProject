@@ -15,8 +15,14 @@ public:
 	
 	virtual void Init() override;
 	
+	UPAUIManagerBase* GetUIManager() { return UIManager; }
+	
 protected:
 	
+	UPROPERTY(EditAnywhere, Category = "Class|UI")
+	TSubclassOf<UPAUIManagerBase> UIManagerClass;
+	
+protected:
 	UPROPERTY(Transient)
 	TObjectPtr<UPAUIManagerBase> UIManager;
 };

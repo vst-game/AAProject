@@ -6,6 +6,8 @@
 
 
 class UUserWidget;
+class APAHUDBase;
+class UPARootWidget;
 
 UCLASS(Abstract)
 class PROJECTAA_API UPAUIManagerBase : public UObject
@@ -13,5 +15,5 @@ class PROJECTAA_API UPAUIManagerBase : public UObject
 	GENERATED_BODY()
 
 public:
-	virtual void Initialize(TSubclassOf<UUserWidget> RootWidgetClass) { };
+	virtual void Initialize(APAHUDBase* HUDBase, TSubclassOf<UPARootWidget> RootWidgetClass) { };
 };

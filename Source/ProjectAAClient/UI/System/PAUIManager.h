@@ -5,19 +5,25 @@
 #include "PAUIManager.generated.h"
 
 
-class UUserWidget;
-
+class UPARootWidget;
+class APAHUDBase;
 UCLASS()
 class PROJECTAACLIENT_API UPAUIManager : public UPAUIManagerBase
 {
 	GENERATED_BODY()
 
 public:
-	virtual void Initialize(TSubclassOf<UUserWidget> RootWidgetClass);
+	static UPAUIManager* Get(UObject* Context);
+	
+	virtual void Initialize(APAHUDBase* HUDBase, TSubclassOf<UPARootWidget> RootWidgetClass) override;
 	
 protected:
 	
 	UPROPERTY(Transient)
-	TObjectPtr<UUserWidget> RootWidget;
+	TObjectPtr<UPARootWidget> RootWidget;
+	
+	UPROPERTY(Transient)
+	TObjectPtr<APAHUDBase> HUD;
+	
 };
 

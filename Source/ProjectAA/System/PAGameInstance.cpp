@@ -6,5 +6,5 @@ void UPAGameInstance::Init()
 {
 	Super::Init();
 	
-	UIManager = NewObject<UPAUIManagerBase>(this);
+	UIManager = NewObject<UPAUIManagerBase>(this, UIManagerClass);
 }

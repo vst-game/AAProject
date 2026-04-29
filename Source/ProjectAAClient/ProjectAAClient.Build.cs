@@ -23,7 +23,8 @@ public class ProjectAAClient : ModuleRules
                 "Slate",
                 "SlateCore",
                 "ProjectAA",
-                "UMG"
+                "UMG",
+                "GameplayTags"
             }
         );
     }

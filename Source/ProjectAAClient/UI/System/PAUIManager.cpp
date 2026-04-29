@@ -1,13 +1,30 @@
 #include "UI/System/PAUIManager.h"
 
-#include "Blueprint/UserWidget.h"
+#include "System/PAGameInstance.h"
+#include "UI/System/PAHUDBase.h"
+#include "UI/System/PARootWidget.h"
 
-void UPAUIManager::Initialize(TSubclassOf<UUserWidget> RootWidgetClass)
+UPAUIManager* UPAUIManager::Get(UObject* Context)
 {
-	/*RootWidget = CreateWidget<UUserWidget>(this, RootWidgetClass);
+	UWorld* World = Context->GetWorld();
 	
+	check(World);
+	
+	UPAGameInstance* GameInstance = Cast<UPAGameInstance>(World->GetGameInstance());
+	
+	ensure(GameInstance);
+	
+	return Cast<UPAUIManager>(GameInstance->GetUIManager());
+}
+
+void UPAUIManager::Initialize(APAHUDBase* HUDBase, TSubclassOf<UPARootWidget> RootWidgetClass)
+{
+	RootWidget = CreateWidget<UPARootWidget>(HUDBase->GetOwningPlayerController(), RootWidgetClass);
+
 	if (IsValid(RootWidget))
 	{
-		RootWidget->AddToViewport();	
-	}*/
+		RootWidget->AddToViewport();
+	}
+	
+	HUD = HUDBase;
 }

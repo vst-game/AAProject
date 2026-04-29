@@ -11,6 +11,9 @@ class PROJECTAA_API APAHUDBase : public AHUD
 
 public:
 	
+	virtual void BeginPlay() override;
+protected:
+	virtual void Init() { }
 protected:
 	
 
