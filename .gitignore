@@ -76,3 +76,5 @@ Plugins/**/Intermediate/*
 DerivedDataCache/*
 
 .superpowers/
+
+*.ini
