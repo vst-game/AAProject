@@ -1,8 +1,8 @@
 #include "UI/System/PAUIManager.h"
-
 #include "System/PAGameInstance.h"
 #include "UI/System/PAHUDBase.h"
 #include "UI/System/PARootWidget.h"
+#include "UI/UI/PACommonActivatableWidget.h"
 
 UPAUIManager* UPAUIManager::Get(UObject* Context)
 {
@@ -27,4 +27,17 @@ void UPAUIManager::Initialize(APAHUDBase* HUDBase, TSubclassOf<UPARootWidget> Ro
 	}
 	
 	HUD = HUDBase;
+}
+
+UPACommonActivatableWidget* UPAUIManager::OpenWindowInternalImpl(UClass* WidgetClass, FGameplayTag LayerTag)
+{
+	UPACommonActivatableWidget* CommonActivatableWidget = nullptr;
+	
+	if (IsValid(RootWidget))
+	{
+		CommonActivatableWidget = RootWidget->GetOrCreateInstance(WidgetClass, LayerTag);
+		ActiveWidgets.Add(CommonActivatableWidget);
+	}
+
+	return CommonActivatableWidget;
 }

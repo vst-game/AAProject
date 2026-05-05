@@ -5,6 +5,7 @@
 #include "PAHUD.generated.h"
 
 class UPARootWidget;
+class UPAHUDPageBase;
 
 UCLASS()
 class PROJECTAACLIENT_API APAHUD : public APAHUDBase
@@ -17,5 +18,4 @@ protected:
 	
 	UPROPERTY(EditAnywhere, Category = "RootWidget")
 	TSubclassOf<UPARootWidget> RootWidgetClass;
-
 };
