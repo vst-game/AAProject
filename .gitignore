@@ -77,4 +77,4 @@ DerivedDataCache/*
 
 .superpowers/
 
-*.ini
+Config/DefaultEditor.ini
