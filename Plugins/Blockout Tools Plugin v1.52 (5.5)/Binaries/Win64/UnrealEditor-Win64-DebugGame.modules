@@ -1,0 +1,8 @@
+{
+	"BuildId": "37670630",
+	"Modules": 
+	{
+		"BlockoutToolsEditorPlugin": "UnrealEditor-BlockoutToolsEditorPlugin-Win64-DebugGame.dll",
+		"BlockoutToolsPlugin": "UnrealEditor-BlockoutToolsPlugin-Win64-DebugGame.dll"
+	}
+}
